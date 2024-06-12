@@ -1,0 +1,2267 @@
+{
+  "folder": "kxNYN5baeQLlm1IO",
+  "name": "NPC",
+  "type": "_template",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hidden": [],
+    "header": {
+      "contents": [
+        {
+          "key": "npc_standing",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "label": "Standing",
+          "defaultValue": "friendly",
+          "size": "full-size",
+          "options": [
+            {
+              "key": "friendly",
+              "value": "Friendly"
+            },
+            {
+              "key": "neutral",
+              "value": "Neutral"
+            },
+            {
+              "key": "hostile",
+              "value": "Hostile"
+            }
+          ],
+          "tableKey": null,
+          "tableKeyColumn": null,
+          "tableLabelColumn": null,
+          "formulaKeyOptions": null,
+          "formulaLabelOptions": null,
+          "type": "select"
+        },
+        {
+          "key": "npc_description",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "label": "Description:",
+          "defaultValue": "",
+          "size": null,
+          "style": "dialog",
+          "type": "textArea"
+        },
+        {
+          "key": "npc_motives_tactics",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "label": "Motivations & Tactics:",
+          "defaultValue": "",
+          "size": null,
+          "style": "dialog",
+          "type": "textArea"
+        }
+      ],
+      "key": "custom_header",
+      "cssClass": null,
+      "role": 0,
+      "permission": 0,
+      "tooltip": null,
+      "visibilityFormula": null,
+      "flow": null,
+      "align": null,
+      "type": "panel"
+    },
+    "body": {
+      "contents": [
+        {
+          "key": "npc_info",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "contents": [
+            {
+              "key": "npc_basic_info",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "npc_tier_type",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "contents": [
+                    {
+                      "key": "npc_tier",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": "Tier:",
+                      "defaultValue": "",
+                      "size": "full-size",
+                      "allowDecimal": false,
+                      "minVal": "0",
+                      "maxVal": "",
+                      "allowRelative": false,
+                      "showControls": false,
+                      "controlsStyle": "hover",
+                      "type": "numberField"
+                    },
+                    {
+                      "key": "npc_type",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": "Type:",
+                      "defaultValue": "none",
+                      "size": "full-size",
+                      "options": [
+                        {
+                          "key": "none",
+                          "value": "None"
+                        },
+                        {
+                          "key": "bruiser",
+                          "value": "Bruiser"
+                        },
+                        {
+                          "key": "hordes",
+                          "value": "Horde"
+                        },
+                        {
+                          "key": "leader",
+                          "value": "Leader"
+                        },
+                        {
+                          "key": "minions",
+                          "value": "Minion"
+                        },
+                        {
+                          "key": "ranged",
+                          "value": "Ranged"
+                        },
+                        {
+                          "key": "skulker",
+                          "value": "Skulker"
+                        },
+                        {
+                          "key": "solo",
+                          "value": "Solo"
+                        },
+                        {
+                          "key": "standard",
+                          "value": "Standard"
+                        },
+                        {
+                          "key": "support",
+                          "value": "Support"
+                        }
+                      ],
+                      "tableKey": null,
+                      "tableKeyColumn": null,
+                      "tableLabelColumn": null,
+                      "formulaKeyOptions": null,
+                      "formulaLabelOptions": null,
+                      "type": "select"
+                    }
+                  ],
+                  "flow": "horizontal",
+                  "align": "left",
+                  "type": "panel"
+                },
+                {
+                  "key": "npc_difficulty",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Difficulty:",
+                  "defaultValue": "10",
+                  "size": "full-size",
+                  "allowDecimal": false,
+                  "minVal": "1",
+                  "maxVal": "",
+                  "allowRelative": false,
+                  "showControls": true,
+                  "controlsStyle": "hover",
+                  "type": "numberField"
+                },
+                {
+                  "key": "npc_attack_modifier",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Attack Modifier:",
+                  "defaultValue": "",
+                  "size": "full-size",
+                  "allowDecimal": false,
+                  "minVal": "",
+                  "maxVal": "",
+                  "allowRelative": false,
+                  "showControls": true,
+                  "controlsStyle": "hover",
+                  "type": "numberField"
+                },
+                {
+                  "key": "npc_attacks_lbl",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": null,
+                  "defaultValue": null,
+                  "size": "full-size",
+                  "icon": "",
+                  "value": "Attacks:",
+                  "prefix": "",
+                  "suffix": "",
+                  "rollMessage": "",
+                  "altRollMessage": "",
+                  "style": "label",
+                  "type": "label"
+                },
+                {
+                  "key": "npc_attacks_tbl",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "rowLayout": [
+                    {
+                      "key": "npc_attacks_tbl_weapon",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": "",
+                      "defaultValue": "",
+                      "size": "full-size",
+                      "charList": "",
+                      "maxLength": "",
+                      "type": "textField",
+                      "align": "left",
+                      "colName": "Weapon"
+                    },
+                    {
+                      "key": "npc_attacks_tbl_range",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": "",
+                      "defaultValue": "melee",
+                      "size": "full-size",
+                      "options": [
+                        {
+                          "key": "melee",
+                          "value": "Melee"
+                        },
+                        {
+                          "key": "very_close",
+                          "value": "Very close"
+                        },
+                        {
+                          "key": "close",
+                          "value": "Close"
+                        },
+                        {
+                          "key": "far",
+                          "value": "Far"
+                        },
+                        {
+                          "key": "very_far",
+                          "value": "Very far"
+                        },
+                        {
+                          "key": "infinite",
+                          "value": "Infinite"
+                        }
+                      ],
+                      "tableKey": null,
+                      "tableKeyColumn": null,
+                      "tableLabelColumn": null,
+                      "formulaKeyOptions": null,
+                      "formulaLabelOptions": null,
+                      "type": "select",
+                      "align": "left",
+                      "colName": "Range"
+                    },
+                    {
+                      "key": "npc_attacks_tbl_dmg",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": "",
+                      "defaultValue": "",
+                      "size": "full-size",
+                      "charList": "",
+                      "maxLength": "",
+                      "type": "textField",
+                      "align": "left",
+                      "colName": "Damage"
+                    },
+                    {
+                      "key": "npc_attacks_tbl_type",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": "",
+                      "defaultValue": "",
+                      "size": "full-size",
+                      "options": [
+                        {
+                          "key": "phy",
+                          "value": "Physical"
+                        },
+                        {
+                          "key": "mag",
+                          "value": "Magic"
+                        }
+                      ],
+                      "tableKey": null,
+                      "tableKeyColumn": null,
+                      "tableLabelColumn": null,
+                      "formulaKeyOptions": null,
+                      "formulaLabelOptions": null,
+                      "type": "select",
+                      "align": "left",
+                      "colName": "Type"
+                    }
+                  ],
+                  "head": false,
+                  "deleteWarning": false,
+                  "predefinedLines": [
+                    {
+                      "deleted": true
+                    }
+                  ],
+                  "canPlayerAdd": true,
+                  "type": "dynamicTable"
+                },
+                {
+                  "key": "npc_features_txt",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": "Features:",
+                  "defaultValue": "<p><em>none</em></p>",
+                  "size": null,
+                  "style": "sheet",
+                  "type": "textArea"
+                }
+              ],
+              "flow": "vertical",
+              "align": "left",
+              "type": "panel"
+            },
+            {
+              "key": "npc_features",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "contents": [
+                {
+                  "key": "npc_threshold_lbl",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "label": null,
+                  "defaultValue": null,
+                  "size": "full-size",
+                  "icon": "",
+                  "value": "Thresholds:",
+                  "prefix": "",
+                  "suffix": "",
+                  "rollMessage": "",
+                  "altRollMessage": "",
+                  "style": "label",
+                  "type": "label"
+                },
+                {
+                  "key": "npc_threshold",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "contents": [
+                    {
+                      "key": "npc_threshold_minor",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": "Minor",
+                      "defaultValue": "1",
+                      "size": "full-size",
+                      "allowDecimal": false,
+                      "minVal": "1",
+                      "maxVal": "9999",
+                      "allowRelative": false,
+                      "showControls": true,
+                      "controlsStyle": "hover",
+                      "type": "numberField"
+                    },
+                    {
+                      "key": "npc_threshold_major",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": "Major",
+                      "defaultValue": "1",
+                      "size": "full-size",
+                      "allowDecimal": false,
+                      "minVal": "1",
+                      "maxVal": "9999",
+                      "allowRelative": false,
+                      "showControls": true,
+                      "controlsStyle": "hover",
+                      "type": "numberField"
+                    },
+                    {
+                      "key": "npc_threshold_severe",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": "Severe",
+                      "defaultValue": "1",
+                      "size": "full-size",
+                      "allowDecimal": false,
+                      "minVal": "1",
+                      "maxVal": "9999",
+                      "allowRelative": false,
+                      "showControls": true,
+                      "controlsStyle": "hover",
+                      "type": "numberField"
+                    }
+                  ],
+                  "flow": "horizontal",
+                  "align": "center",
+                  "type": "panel"
+                },
+                {
+                  "key": "npc_hp_sp",
+                  "cssClass": "",
+                  "role": "0",
+                  "permission": "0",
+                  "tooltip": "",
+                  "visibilityFormula": "",
+                  "contents": [
+                    {
+                      "key": "npc_hp",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": "HP",
+                      "defaultValue": "1",
+                      "size": "m-small",
+                      "allowDecimal": false,
+                      "minVal": "1",
+                      "maxVal": "14",
+                      "allowRelative": false,
+                      "showControls": true,
+                      "controlsStyle": "hover",
+                      "type": "numberField"
+                    },
+                    {
+                      "key": "npc_hp_ticks",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "contents": [
+                        {
+                          "key": "npc_hp_1",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_hp >= 1",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_hp_2",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_hp >= 2",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_hp_3",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_hp >= 3",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_hp_4",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_hp >= 4",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_hp_5",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_hp >= 5",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_hp_6",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_hp >= 6",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_hp_7",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_hp >= 7",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_hp_8",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_hp >= 8",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_hp_9",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_hp >= 9",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_hp_10",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_hp >= 10",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_hp_11",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_hp >= 11",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_hp_12",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_hp >= 12",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_hp_13",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_hp >= 13",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_hp_14",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_hp >= 14",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        }
+                      ],
+                      "flow": "horizontal",
+                      "align": "left",
+                      "type": "panel"
+                    },
+                    {
+                      "key": "npc_stress",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "label": "Stress",
+                      "defaultValue": "1",
+                      "size": "m-small",
+                      "allowDecimal": false,
+                      "minVal": "1",
+                      "maxVal": "14",
+                      "allowRelative": false,
+                      "showControls": true,
+                      "controlsStyle": "hover",
+                      "type": "numberField"
+                    },
+                    {
+                      "key": "npc_stress_ticks",
+                      "cssClass": "",
+                      "role": "0",
+                      "permission": "0",
+                      "tooltip": "",
+                      "visibilityFormula": "",
+                      "contents": [
+                        {
+                          "key": "npc_stress_1",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_stress >= 1",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_stress_2",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_stress >= 2",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_stress_3",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_stress >= 3",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_stress_4",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_stress >= 4",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_stress_5",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_stress >= 5",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_stress_6",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_stress >= 6",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_stress_7",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_stress >= 7",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_stress_8",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_stress >= 8",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_stress_9",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_stress >= 9",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_stress_10",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_stress >= 10",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_stress_11",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_stress >= 11",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_stress_12",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_stress >= 12",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_stress_13",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_stress >= 13",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        },
+                        {
+                          "key": "npc_stress_14",
+                          "cssClass": "",
+                          "role": "0",
+                          "permission": "0",
+                          "tooltip": "",
+                          "visibilityFormula": "npc_stress >= 14",
+                          "label": "",
+                          "defaultValue": null,
+                          "size": "x-small",
+                          "type": "checkbox",
+                          "defaultChecked": false
+                        }
+                      ],
+                      "flow": "horizontal",
+                      "align": "left",
+                      "type": "panel"
+                    }
+                  ],
+                  "flow": "vertical",
+                  "align": "left",
+                  "type": "panel"
+                }
+              ],
+              "flow": "vertical",
+              "align": "left",
+              "type": "panel"
+            }
+          ],
+          "flow": "horizontal",
+          "align": "center",
+          "type": "panel"
+        }
+      ],
+      "key": "custom_body",
+      "cssClass": null,
+      "role": 0,
+      "permission": 0,
+      "tooltip": null,
+      "visibilityFormula": null,
+      "flow": null,
+      "align": null,
+      "type": "panel"
+    },
+    "display": {
+      "width": "700",
+      "height": "600",
+      "fix_size": false,
+      "pp_width": "64",
+      "pp_height": "64"
+    },
+    "attributeBar": {},
+    "activeEffects": {},
+    "activeConditionalModifierGroups": [],
+    "templateSystemUniqueVersion": 314114451
+  },
+  "prototypeToken": {
+    "name": "NPC",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false
+  },
+  "items": [],
+  "effects": [],
+  "flags": {
+    "custom-system-builder": {
+      "version": "3.0.0",
+      "templateHistory": [
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "contents",
+              2,
+              "contents",
+              3,
+              "contents",
+              9,
+              "defaultChecked"
+            ],
+            "lhs": true,
+            "rhs": false
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "contents",
+              2,
+              "contents",
+              3,
+              "contents",
+              10,
+              "defaultChecked"
+            ],
+            "lhs": true,
+            "rhs": false
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "contents",
+              2,
+              "contents",
+              3,
+              "contents",
+              11,
+              "defaultChecked"
+            ],
+            "lhs": true,
+            "rhs": false
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "contents",
+              2,
+              "contents",
+              3,
+              "contents",
+              12,
+              "defaultChecked"
+            ],
+            "lhs": true,
+            "rhs": false
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "contents",
+              2,
+              "contents",
+              3,
+              "contents",
+              13,
+              "defaultChecked"
+            ],
+            "lhs": true,
+            "rhs": false
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents"
+            ],
+            "index": 5,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "npc_attack_modifier",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": "Attack Modifier:",
+                "defaultValue": "",
+                "size": "full-size",
+                "allowDecimal": false,
+                "minVal": "",
+                "maxVal": "",
+                "allowRelative": false,
+                "showControls": true,
+                "controlsStyle": "hover",
+                "type": "numberField"
+              }
+            }
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              5,
+              "key"
+            ],
+            "lhs": "npc_attack_modifier",
+            "rhs": "npc_features_txt"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              5,
+              "label"
+            ],
+            "lhs": "Attack Modifier:",
+            "rhs": "Features:"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              5,
+              "defaultValue"
+            ],
+            "lhs": "",
+            "rhs": "<p><em>none</em></p>"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              5,
+              "size"
+            ],
+            "lhs": "full-size",
+            "rhs": null
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              5,
+              "allowDecimal"
+            ],
+            "lhs": false
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              5,
+              "minVal"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              5,
+              "maxVal"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              5,
+              "allowRelative"
+            ],
+            "lhs": false
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              5,
+              "showControls"
+            ],
+            "lhs": true
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              5,
+              "controlsStyle"
+            ],
+            "lhs": "hover"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              5,
+              "type"
+            ],
+            "lhs": "numberField",
+            "rhs": "textArea"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              5,
+              "style"
+            ],
+            "rhs": "sheet"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              4,
+              "key"
+            ],
+            "lhs": "npc_features_txt",
+            "rhs": "npc_attacks_tbl"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              4,
+              "label"
+            ],
+            "lhs": "Features:"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              4,
+              "defaultValue"
+            ],
+            "lhs": "<p><em>none</em></p>"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              4,
+              "size"
+            ],
+            "lhs": null
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              4,
+              "style"
+            ],
+            "lhs": "sheet"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              4,
+              "type"
+            ],
+            "lhs": "textArea",
+            "rhs": "dynamicTable"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              4,
+              "rowLayout"
+            ],
+            "rhs": [
+              {
+                "key": "npc_attacks_tbl_weapon",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": "",
+                "defaultValue": "",
+                "size": "full-size",
+                "charList": "",
+                "maxLength": "",
+                "type": "textField",
+                "align": "left",
+                "colName": "Weapon"
+              },
+              {
+                "key": "npc_attacks_tbl_range",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": "",
+                "defaultValue": "melee",
+                "size": "full-size",
+                "options": [
+                  {
+                    "key": "melee",
+                    "value": "Melee"
+                  },
+                  {
+                    "key": "very_close",
+                    "value": "Very close"
+                  },
+                  {
+                    "key": "close",
+                    "value": "Close"
+                  },
+                  {
+                    "key": "far",
+                    "value": "Far"
+                  },
+                  {
+                    "key": "very_far",
+                    "value": "Very far"
+                  },
+                  {
+                    "key": "infinite",
+                    "value": "Infinite"
+                  }
+                ],
+                "tableKey": null,
+                "tableKeyColumn": null,
+                "tableLabelColumn": null,
+                "formulaKeyOptions": null,
+                "formulaLabelOptions": null,
+                "type": "select",
+                "align": "left",
+                "colName": "Range"
+              },
+              {
+                "key": "npc_attacks_tbl_dmg",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": "",
+                "defaultValue": "",
+                "size": "full-size",
+                "charList": "",
+                "maxLength": "",
+                "type": "textField",
+                "align": "left",
+                "colName": "Damage"
+              },
+              {
+                "key": "npc_attacks_tbl_type",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": "",
+                "defaultValue": "",
+                "size": "full-size",
+                "options": [
+                  {
+                    "key": "phy",
+                    "value": "Physical"
+                  },
+                  {
+                    "key": "mag",
+                    "value": "Magic"
+                  }
+                ],
+                "tableKey": null,
+                "tableKeyColumn": null,
+                "tableLabelColumn": null,
+                "formulaKeyOptions": null,
+                "formulaLabelOptions": null,
+                "type": "select",
+                "align": "left",
+                "colName": "Type"
+              }
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              4,
+              "head"
+            ],
+            "rhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              4,
+              "deleteWarning"
+            ],
+            "rhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              4,
+              "predefinedLines"
+            ],
+            "rhs": [
+              {
+                "deleted": true
+              }
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              4,
+              "canPlayerAdd"
+            ],
+            "rhs": true
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "key"
+            ],
+            "lhs": "npc_attacks_tbl",
+            "rhs": "npc_attacks_lbl"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "rowLayout"
+            ],
+            "lhs": [
+              {
+                "key": "npc_attacks_tbl_weapon",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": "",
+                "defaultValue": "",
+                "size": "full-size",
+                "charList": "",
+                "maxLength": "",
+                "type": "textField",
+                "align": "left",
+                "colName": "Weapon"
+              },
+              {
+                "key": "npc_attacks_tbl_range",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": "",
+                "defaultValue": "melee",
+                "size": "full-size",
+                "options": [
+                  {
+                    "key": "melee",
+                    "value": "Melee"
+                  },
+                  {
+                    "key": "very_close",
+                    "value": "Very close"
+                  },
+                  {
+                    "key": "close",
+                    "value": "Close"
+                  },
+                  {
+                    "key": "far",
+                    "value": "Far"
+                  },
+                  {
+                    "key": "very_far",
+                    "value": "Very far"
+                  },
+                  {
+                    "key": "infinite",
+                    "value": "Infinite"
+                  }
+                ],
+                "tableKey": null,
+                "tableKeyColumn": null,
+                "tableLabelColumn": null,
+                "formulaKeyOptions": null,
+                "formulaLabelOptions": null,
+                "type": "select",
+                "align": "left",
+                "colName": "Range"
+              },
+              {
+                "key": "npc_attacks_tbl_dmg",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": "",
+                "defaultValue": "",
+                "size": "full-size",
+                "charList": "",
+                "maxLength": "",
+                "type": "textField",
+                "align": "left",
+                "colName": "Damage"
+              },
+              {
+                "key": "npc_attacks_tbl_type",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "label": "",
+                "defaultValue": "",
+                "size": "full-size",
+                "options": [
+                  {
+                    "key": "phy",
+                    "value": "Physical"
+                  },
+                  {
+                    "key": "mag",
+                    "value": "Magic"
+                  }
+                ],
+                "tableKey": null,
+                "tableKeyColumn": null,
+                "tableLabelColumn": null,
+                "formulaKeyOptions": null,
+                "formulaLabelOptions": null,
+                "type": "select",
+                "align": "left",
+                "colName": "Type"
+              }
+            ]
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "head"
+            ],
+            "lhs": false
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "deleteWarning"
+            ],
+            "lhs": false
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "predefinedLines"
+            ],
+            "lhs": [
+              {
+                "deleted": true
+              }
+            ]
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "canPlayerAdd"
+            ],
+            "lhs": true
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "type"
+            ],
+            "lhs": "dynamicTable",
+            "rhs": "label"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "label"
+            ],
+            "rhs": null
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "defaultValue"
+            ],
+            "rhs": null
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "size"
+            ],
+            "rhs": "full-size"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "icon"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "value"
+            ],
+            "rhs": "Attacks:"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "prefix"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "suffix"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "rollMessage"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "altRollMessage"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              3,
+              "style"
+            ],
+            "rhs": "label"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "key"
+            ],
+            "lhs": "npc_attacks_lbl",
+            "rhs": "npc_attack_modifier"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "label"
+            ],
+            "lhs": null,
+            "rhs": "Attack Modifier:"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "defaultValue"
+            ],
+            "lhs": null,
+            "rhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "icon"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "value"
+            ],
+            "lhs": "Attacks:"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "prefix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "suffix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "rollMessage"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "altRollMessage"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "style"
+            ],
+            "lhs": "label"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "type"
+            ],
+            "lhs": "label",
+            "rhs": "numberField"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "allowDecimal"
+            ],
+            "rhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "minVal"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "maxVal"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "allowRelative"
+            ],
+            "rhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "showControls"
+            ],
+            "rhs": true
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              2,
+              "controlsStyle"
+            ],
+            "rhs": "hover"
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              1,
+              "label"
+            ],
+            "lhs": "Difficulty",
+            "rhs": "Difficulty:"
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              0,
+              "label"
+            ],
+            "lhs": "Tier",
+            "rhs": "Tier:"
+          }
+        ],
+        [
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              0,
+              "contents",
+              1,
+              "label"
+            ],
+            "lhs": "Type",
+            "rhs": "Type:"
+          }
+        ]
+      ],
+      "templateHistoryRedo": []
+    },
+    "exportSource": {
+      "world": "the-sablewood-messengers",
+      "system": "custom-system-builder",
+      "coreVersion": "11.315",
+      "systemVersion": "3.0.0"
+    }
+  },
+  "_stats": {
+    "systemId": "custom-system-builder",
+    "systemVersion": "3.0.0",
+    "coreVersion": "11.315",
+    "createdTime": 1717515220506,
+    "modifiedTime": 1718006891703,
+    "lastModifiedBy": "kfluiXg8bbzhFc5a"
+  }
+}
